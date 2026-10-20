@@ -1,0 +1,39 @@
+### Create Customer
+POST http://localhost:8080/api/bank/customers
+Content-Type: application/json
+
+{
+  "name": "Mohammed Aslam",
+  "email": "aslam@gmail.com"
+}
+
+### Create Account
+POST http://localhost:8080/api/bank/accounts
+Content-Type: application/json
+
+{
+  "accountNumber": "ACC123",
+  "balance": 1500.00,
+  "customerId": 1
+}
+
+### Search Customers
+GET http://localhost:8080/api/bank/customers/search?name=Mohammed&page=0&size=10
+
+### Get Accounts by Email
+GET http://localhost:8080/api/bank/accounts/by-email?email=aslam@gmail.com
+
+### External Google API
+GET http://localhost:8080/api/bank/external-google
+
+### Update Customer
+PUT http://localhost:8080/api/bank/customers/1
+Content-Type: application/json
+
+{
+  "name": "Mohammed Aslam Updated",
+  "email": "aslam.updated@gmail.com"
+}
+
+### Delete Customer
+DELETE http://localhost:8080/api/bank/customers/1
